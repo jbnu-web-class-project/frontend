@@ -1,11 +1,10 @@
-// src/components/Body_home.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Body_home = () => {
     const navigate = useNavigate()
     const handleNavigate = () => {
-        navigate('/tmp'); // '/tmp' 경로로 이동
+        navigate('/tmp');
       };
     return (
         <main className="relative w-full h-auto mx-auto bg-[#fff]">

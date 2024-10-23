@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const Body_market = () => {
   const navigate = useNavigate()
   const handleNavigate = () => {
-      navigate('/tmp'); // '/tmp' 경로로 이동
+      navigate('/tmp');
     };
   return (
   <main className="relative min-w-[undefined] max-w-[undefined] min-h-[undefined] max-h-[undefined] flex bg-[#fff] opacity-[NaN]">
