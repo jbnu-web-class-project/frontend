@@ -1,148 +1,66 @@
-.main {
-    position: relative;
-    max-width: 2560px;
-    height: auto;
-    margin: 0 auto;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px; /* p-4 */
-  }
-  
-  @media (min-width: 768px) {
-    .main {
-      padding: 40px; /* md:p-10 */
-    }
-  }
-  
-  .search-bar {
-    margin-top: 20px; /* mt-5 */
-    width: 90%;
-    aspect-ratio: 25/2;
-    background-color: #d9d9d9;
-    border-radius: 9999px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  @media (min-width: 768px) {
-    .search-bar {
-      width: 40%;
-    }
-  }
-  
+/* 컨테이너 설정 */
+.body-market {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* 상단부터 시작하도록 설정 */
+  background-color: #fff;
+  padding: 20px;
+  height: 100vh; /* 전체 화면을 채우도록 설정 */
+  box-sizing: border-box;
+}
+
+/* 검색창 */
+.search-bar {
+  width: 80%;
+  height: 80px;
+  background-color: #d9d9d9;
+  border-radius: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+}
+
+/* 필터 섹션 */
+.filter-section {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  text-align: left; /* 왼쪽 정렬 */
+}
+
+.filter-label {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+/* 반응형 미디어 쿼리 */
+@media (max-width: 768px) {
+  .search-bar,
   .filter-section {
-    margin-top: 40px; /* mt-10 */
-    width: 100%;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 16px;
-    padding: 20px; /* p-5 */
-    display: flex;
-    flex-direction: column;
+    width: 90%;
   }
-  
-  @media (min-width: 768px) {
-    .filter-section {
-      width: 90%;
-      max-width: 1200px;
-    }
+
+  .filter-label {
+    font-size: 1.2rem;
   }
-  
-  .option-group {
-    display: flex;
-    flex-direction: column;
-    gap: 16px; /* space-y-4 */
+}
+
+@media (max-width: 480px) {
+  .search-bar,
+  .filter-section {
     width: 100%;
   }
-  
-  @media (min-width: 768px) {
-    .option-group {
-      width: 20%;
-    }
+
+  .filter-label {
+    font-size: 1rem;
   }
-  
-  .filter-option {
-    width: 100%;
-    height: 50px;
-    background-color: #e5e5e5;
-    border: 1px solid #828282;
-    border-radius: 12px;
-  }
-  
-  @media (min-width: 768px) {
-    .filter-option {
-      height: 67px;
-    }
-  }
-  
-  .result-group {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    gap: 16px; /* space-y-4 */
-  }
-  
-  .result-card {
-    background-color: white;
-    border: 1px solid #828282;
-    padding: 16px;
-    border-radius: 12px;
-  }
-  
-  .market-section {
-    width: 100%;
-    margin-top: 40px; /* mt-10 */
-  }
-  
-  .card-group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; /* gap-5 */
-  }
-  
-  .card {
-    width: 45%;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  @media (min-width: 640px) {
-    .card {
-      width: 30%;
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .card {
-      width: 22%;
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .card {
-      width: 15%;
-    }
-  }
-  
-  .card-image {
-    width: 100%;
-    background-color: #d9d9d9;
-    border-radius: 16px;
-    aspect-ratio: 1.5/1.2;
-  }
-  
-  .card-title {
-    margin-top: 16px; /* mt-4 */
-    font-weight: bold;
-    color: black;
-  }
-  
-  .card-price, .card-sizes {
-    font-weight: medium;
-    color: black;
-  }
-  
+}
