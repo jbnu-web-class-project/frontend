@@ -4,7 +4,7 @@ import Body from '../component/Body_market';
 
 const Market = () => {
     return (
-      <div className="w-[1920px] h-[1080px] mx-auto bg-[#fff]">
+      <div className="w-full h-screen mx-auto bg-[#fff]">
         <Header />
         <Body />
       </div>
