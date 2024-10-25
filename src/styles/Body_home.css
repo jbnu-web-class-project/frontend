@@ -1,0 +1,181 @@
+.main-container {
+    position: relative;
+    max-width: 2560px;
+    height: auto;
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .main-container {
+      padding: 2.5rem;
+    }
+  }
+  
+  .home-search-bar {
+    margin-top: 1.25rem;
+    width: 90%;
+    aspect-ratio: 25/1.5;
+    background-color: #d9d9d9;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .home-search-bar {
+      width: 40%;
+    }
+  }
+  
+  .title {
+    margin-top: 1rem;
+    font-weight: 800;
+    color: black;
+  }
+  
+  .calendar-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2.5rem;
+    gap: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .calendar-section {
+      flex-direction: row;
+    }
+  }
+  
+  .calendar {
+    width: 100%;
+    aspect-ratio: 1.5 / 1.2;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .calendar {
+      width: 20%;
+    }
+  }
+  
+  .calendar-title {
+    font-weight: 800;
+    color: black;
+    margin-top: 1rem;
+  }
+  
+  .icon-section {
+    width: 30%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .icon-section {
+      width: 2%;
+      flex-direction: column;
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+  
+  .icon {
+    width: 15%;
+    aspect-ratio: 1 / 1;
+    background-color: #d9d9d9;
+    border-radius: 9999px;
+  }
+  
+  @media (min-width: 768px) {
+    .icon {
+      width: 70%;
+    }
+  }
+  
+  .guide-section {
+    width: 45%;
+    aspect-ratio: 1.5 / 1.2;
+    background-color: #d9d9d9;
+    border-radius: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .guide-section {
+      width: 20%;
+    }
+  }
+  
+  .shopping-title,
+  .secondhand-title {
+    margin-top: 2.5rem;
+    font-weight: 800;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .product-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .product-section {
+      gap: 2.5rem;
+    }
+  }
+  
+  .product-item {
+    width: 45%;
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    .product-item {
+      width: 15%;
+    }
+  }
+  
+  .product-img {
+    width: 100%;
+    aspect-ratio: 1.5 / 1.2;
+    background-color: #d9d9d9;
+    border-radius: 1rem;
+  }
+  
+  .product-title {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .product-price {
+    font-weight: 500;
+    color: black;
+  }
+  
+  .product-sizes {
+    font-weight: 500;
+    color: black;
+  }
+  
