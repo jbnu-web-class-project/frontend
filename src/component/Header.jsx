@@ -24,7 +24,7 @@ const Header = () => {
   };
 
   const handleShopping = () => {
-    navigate('/Market');
+    navigate('/market');
     console.log("쇼핑.");
   };
 
@@ -33,6 +33,7 @@ const Header = () => {
   };
 
   const handleCommunity = () => {
+    navigate('/community');
     console.log("커뮤니티.");
   };
 
