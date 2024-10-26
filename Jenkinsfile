@@ -86,10 +86,10 @@ pipeline {
                             sh """
                             cd k8s-manifest &&
                             ls -l &&
-                            sed -i 's|image: .*\$|image: ${HARBOR_REPO}/heim/${IMAGE_NAME}:${env.BUILD_ID}|' web-front-deployment.yaml &&
+                            sed -i 's|image: .*\$|image: ${HARBOR_REPO}/heim/${IMAGE_NAME}:${env.BUILD_ID}|' frontend-deploy.yaml &&
                             git config --global user.email "gjdhks1212@gmail.com"
                             git config --global user.name "hodu26"
-                            git add web-front-deployment.yaml &&
+                            git add frontend-deploy.yaml &&
                             git commit -m 'update: update image to ${env.BUILD_ID}' &&
                             git push --set-upstream origin main
                             """
