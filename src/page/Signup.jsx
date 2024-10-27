@@ -1,14 +1,14 @@
 import React from 'react';
 import Header from '../component/Header';
-import Body from '../component/Body_notfound';
+import Body from '../component/Body_signup';
 
-const NotFound = () => {
+const Signup = () => {
   return (
     <div className="w-full h-screen mx-auto bg-[#fff]">
-        <Header />
-        <Body />
-      </div>
+      <Header />
+      <Body />
+    </div>
   );
 };
 
-export default NotFound;
+export default Signup;

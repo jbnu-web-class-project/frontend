@@ -10,6 +10,7 @@ const Header = () => {
   };
 
   const handleLogout = () => {
+    navigate('/login');
     console.log("로그아웃되었습니다.");
   };
 

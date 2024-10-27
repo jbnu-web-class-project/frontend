@@ -1,0 +1,142 @@
+/* Main Container */
+.main-container {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 5rem 0;
+  }
+  
+  .relative-container {
+    width: 100%;
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .form-container {
+    background-color: white;
+    border-radius: 1.5rem;
+    border: 1px solid #e5e7eb;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Icon */
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .icon-wrapper {
+    width: 7rem;
+    height: 7rem;
+    background-color: #f3f4f6;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon {
+    width: 4rem;
+    height: 4rem;
+    color: #4b5563;
+  }
+  
+  /* Google Sign Up Button */
+  .google-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+  }
+  
+  .google-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #d1d5db;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+  }
+  
+  .google-btn:hover {
+    background-color: #f9fafb;
+  }
+  
+  /* Form */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+  
+  .input-field,
+  .select-field {
+    width: 100%;
+    height: 4.5rem;
+    padding: 0 2rem;
+    background-color: #f9fafb;
+    border-bottom: 2px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .input-field:focus,
+  .select-field:focus {
+    border-color: #3b82f6;
+  }
+  
+  /* Dropdown */
+  .select-field {
+    appearance: none;
+  }
+  
+  .dropdown-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+  }
+  
+  /* Buttons */
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+  
+  .cancel-button,
+  .submit-button {
+    padding: 1rem 3rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: white;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+  }
+  
+  .cancel-button {
+    background-color: #9ca3af;
+  }
+  
+  .cancel-button:hover {
+    background-color: #6b7280;
+  }
+  
+  .submit-button {
+    background-color: #1f2937;
+  }
+  
+  .submit-button:hover {
+    background-color: #111827;
+  }
+  

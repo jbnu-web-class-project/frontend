@@ -1,0 +1,171 @@
+/* Main Container */
+.main-container {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .inner-container {
+    position: relative;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .form-wrapper {
+    background-color: white;
+    border-radius: 1.5rem;
+    border: 1px solid #e5e7eb; /* gray-200 */
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Key Icon */
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .icon-circle {
+    width: 7rem;
+    height: 7rem;
+    background-color: #f3f4f6; /* gray-100 */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon {
+    width: 4rem;
+    height: 4rem;
+    color: #4b5563; /* gray-600 */
+  }
+  
+  /* Login Form */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 40rem;
+    margin: 0 auto;
+  }
+  
+  .input-container {
+    position: relative;
+  }
+  
+  .input {
+    width: 100%;
+    height: 4.5rem;
+    padding: 0 2rem;
+    background-color: #f9fafb; /* gray-50 */
+    border-bottom: 2px solid #d1d5db; /* gray-300 */
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  .input:focus {
+    border-color: #3b82f6; /* blue-500 */
+  }
+  
+  /* Remember Me Checkbox */
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 1rem;
+  }
+  
+  .checkbox {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+    appearance: none;
+    border: 2px solid #2563eb; /* blue-600 */
+    border-radius: 0.5rem;
+  }
+  
+  .checkbox:checked {
+    background-color: #2563eb; /* blue-600 */
+    border: transparent;
+  }
+  
+  .checkbox:checked + .checkmark {
+    display: block;
+  }
+  
+  .checkmark {
+    display: none;
+    position: absolute;
+    left: 0.25rem;
+    top: 0.25rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: white;
+    pointer-events: none;
+  }
+  
+  /* Buttons */
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .button {
+    padding: 1rem 3rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    border-radius: 0.75rem;
+    transition: background-color 0.2s;
+  }
+  
+  .signup-button {
+    background-color: #9ca3af; /* gray-400 */
+    color: white;
+  }
+  
+  .signup-button:hover {
+    background-color: #6b7280; /* gray-500 */
+  }
+  
+  .login-button {
+    background-color: #1f2937; /* gray-800 */
+    color: white;
+  }
+  
+  .login-button:hover {
+    background-color: #111827; /* gray-900 */
+  }
+  
+  /* Google Sign In */
+  .google-signin {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .google-button {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #d1d5db; /* gray-300 */
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+  }
+  
+  .google-button:hover {
+    background-color: #f9fafb; /* gray-50 */
+  }
+
+  
