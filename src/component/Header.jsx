@@ -42,9 +42,12 @@ const Header = () => {
     <header className="relative w-full max-w-[2560px] mx-auto bg-[#fff]">
       {/* HEIM.net 로고 */}
       <div className="flex justify-between items-center px-4 py-2 md:px-8">
-        <div className="text-4xl font-['Inter'] font-extrabold text-[#000] whitespace-nowrap" onClick={handleHome}>
-          HEIM.net
-        </div>
+          <div 
+              className="text-5xl md:text-6xl font-['Inter'] font-extrabold text-[#000] whitespace-nowrap cursor-pointer hover:scale-105 transition-transform duration-200" 
+              onClick={handleHome}
+          >
+              HEIM.net
+          </div>
 
         {/* 로그아웃 및 설정 */}
         <div className="flex flex-raw">
