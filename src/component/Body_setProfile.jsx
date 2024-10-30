@@ -4,15 +4,13 @@ import { useNavigate } from 'react-router-dom';
 import { handleApiError } from '../utils/errorHandler';
 import '../styles/Body_signup.css';
 
-const SignUp = () => {
+const SetProfile = () => {
   const navigate = useNavigate(); // useNavigate 훅 사용
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-    confirmPassword: '',
     nickname: '',
     phone: '',
     address: '',
+    profile_img: '',
     favoriteSport: '',
     favoriteTeam: ''
   });
@@ -28,11 +26,12 @@ const SignUp = () => {
 
   // 폼 제출 핸들러
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     console.log(formData); // 현재 formData 출력 (서버로 보내기 전에 확인 용도)
-    
+
     try {
-      const response = await fetch('http://members-svc:3000/members/auth/signup', {
+      // 서버에 데이터 전송 (예시 URL 사용)
+      const response = await fetch('http://members-svc:3000/members/auth/setProfile', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -56,7 +55,7 @@ const SignUp = () => {
 
   // 취소 버튼 핸들러
   const handleCancel = () => {
-    navigate('/login');
+    navigate('/');
   };
 
   return (
@@ -73,39 +72,15 @@ const SignUp = () => {
             </div>
           </div>
 
-          {/* Google Sign Up Button */}
-          <div className="google-btn-container">
-            <button className="google-btn">
-              <img src="../assets/image/google-signUp.svg" alt="Google Sign Up" />
-            </button>
-          </div>
-
           {/* Signup Form */}
           <form className="form" onSubmit={handleSubmit}>
             {/* Input Fields */}
             <input 
-              type="email" 
-              name="email" 
-              placeholder="아이디 (이메일)" 
+              type="file" 
+              accept="image/*" 
+              placeholder="프로필이미지" 
               className="input-field" 
-              value={formData.email} 
-              onChange={handleChange} 
-            />
-            <input 
-              type="password" 
-              name="password" 
-              placeholder="비밀번호" 
-              className="input-field" 
-              value={formData.password} 
-              onChange={handleChange} 
-            />
-            <input 
-              type="password" 
-              name="confirmPassword" 
-              placeholder="비밀번호 확인" 
-              className="input-field" 
-              value={formData.confirmPassword} 
-              onChange={handleChange} 
+              onChange={(e) => setFormData({ ...formData, profile_img: e.target.files[0] })} 
             />
             <input 
               type="text" 
@@ -175,4 +150,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SetProfile;
