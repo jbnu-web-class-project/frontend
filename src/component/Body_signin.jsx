@@ -18,7 +18,7 @@ const Login = () => {
 
         try {
             // 로그인 API 호출 (예시 URL 사용)
-            const response = await fetch('http://members-svc:3000/members/auth/signin', {
+            const response = await fetch('http://members-svc:3000/api/members/auth/signin', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

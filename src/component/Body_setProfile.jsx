@@ -31,7 +31,7 @@ const SetProfile = () => {
 
     try {
       // 서버에 데이터 전송 (예시 URL 사용)
-      const response = await fetch('http://members-svc:3000/members/auth/setProfile', {
+      const response = await fetch('http://members-svc:3000/api/members/auth/setProfile', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
