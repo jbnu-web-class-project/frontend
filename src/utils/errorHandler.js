@@ -1,4 +1,4 @@
-export const handleApiError = (response) => {
+export const handleApiError = async (response) => {
     if (!response.ok) {
         return response.json().then((errorData) => {
             let errorMessage;
