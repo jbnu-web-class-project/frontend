@@ -32,7 +32,7 @@ const SignUp = () => {
     console.log(formData); // 현재 formData 출력 (서버로 보내기 전에 확인 용도)
     
     try {
-      const response = await fetch('http://members-svc:3000/api/members/auth/signup', {
+      const response = await fetch('/api/members/auth/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
