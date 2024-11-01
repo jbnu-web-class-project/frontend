@@ -39,10 +39,7 @@ const SetProfile = () => {
         body: JSON.stringify(formData),
       });
 
-      const httpResponse = await handleApiError(response); // 에러 핸들링 호출
-      console.log('서버 응답:', httpResponse);
-
-      const data = await response.json(); // 응답을 JSON으로 변환
+      const data = await handleApiError(response); // 에러 핸들링 호출 및 응답 json 반환
       console.log('서버 응답:', data);
 
       navigate('/');
