@@ -22,11 +22,13 @@ const Login = () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Accept': 'application/json'
                 },
                 body: JSON.stringify({ email, password }),
+                credentials: 'include' // 쿠키 포함
             });
 
-            const data = await handleApiError(response); // 에러 핸들링 호출 및 응답 json 반환
+            const data = await handleApiError(response); // 에러 핸들링 호출 및 응답 json
             console.log('서버 응답:', data);
 
             if (data.user.set_profile){

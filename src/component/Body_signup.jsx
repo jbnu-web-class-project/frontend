@@ -10,11 +10,7 @@ const SignUp = () => {
     email: '',
     password: '',
     confirmPassword: '',
-    nickname: '',
-    phone: '',
-    address: '',
-    favoriteSport: '',
-    favoriteTeam: ''
+    name: '',
   });
 
   // 입력 필드의 값을 업데이트하는 핸들러
@@ -106,59 +102,12 @@ const SignUp = () => {
             />
             <input 
               type="text" 
-              name="nickname" 
-              placeholder="닉네임" 
+              name="name" 
+              placeholder="이름" 
               className="input-field" 
-              value={formData.nickname} 
+              value={formData.name} 
               onChange={handleChange} 
             />
-            <input 
-              type="tel" 
-              name="phone" 
-              placeholder="전화번호" 
-              className="input-field" 
-              value={formData.phone} 
-              onChange={handleChange} 
-            />
-            <input 
-              type="text" 
-              name="address" 
-              placeholder="주소" 
-              className="input-field" 
-              value={formData.address} 
-              onChange={handleChange} 
-            />
-
-            {/* Dropdown Selects */}
-            <div className="relative">
-              <select 
-                className="select-field" 
-                name="favoriteSport" 
-                value={formData.favoriteSport} 
-                onChange={handleChange}
-              >
-                <option value="">선호 스포츠</option>
-                <option value="football">축구</option>
-                <option value="baseball">야구</option>
-                <option value="basketball">농구</option>
-              </select>
-              <ChevronDown className="dropdown-icon" />
-            </div>
-
-            <div className="relative">
-              <select 
-                className="select-field" 
-                name="favoriteTeam" 
-                value={formData.favoriteTeam} 
-                onChange={handleChange}
-              >
-                <option value="">선호 구단</option>
-                <option value="team1">팀 1</option>
-                <option value="team2">팀 2</option>
-                <option value="team3">팀 3</option>
-              </select>
-              <ChevronDown className="dropdown-icon" />
-            </div>
 
             {/* Buttons */}
             <div className="button-group">

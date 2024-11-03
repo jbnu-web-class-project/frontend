@@ -3,18 +3,22 @@ import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // 로그인 상태 관리
 
   // 로그인, 로그아웃, 설정
   const handleLogin = () => {
+    setIsLoggedIn(true);
+    navigate('/login')
     console.log("로그인되었습니다.");
   };
 
   const handleLogout = () => {
-    navigate('/login');
+    setIsLoggedIn(false);
     console.log("로그아웃되었습니다.");
   };
 
   const handleSetting = () => {
+    navigate('/tmp');
     console.log("설정.");
   };
 
@@ -30,6 +34,7 @@ const Header = () => {
   };
 
   const handleSecondHand = () => {
+    navigate('/tmp');
     console.log("중고.");
   };
 
@@ -51,9 +56,15 @@ const Header = () => {
 
         {/* 로그아웃 및 설정 */}
         <div className="flex flex-raw">
-          <div className="text-xl font-['Inter'] font-extrabold text-[#000] bg-transparent cursor-pointer hover:text-gray-500" onClick={handleLogout}> 로그아웃 </div>
-          <div className="text-xl font-['Inter'] font-extrabold text-[#000] whitespace-pre">    |    </div>
-          <div className="text-xl font-['Inter'] font-extrabold text-[#000] bg-transparent cursor-pointer hover:text-gray-500" onClick={handleSetting}> 설정 </div>
+          {isLoggedIn ? (
+            <>
+              <div className="text-xl font-['Inter'] font-extrabold text-[#000] bg-transparent cursor-pointer hover:text-gray-500" onClick={handleLogout}> 로그아웃 </div>
+              <div className="text-xl font-['Inter'] font-extrabold text-[#000] whitespace-pre">{"    |    "}</div>
+              <div className="text-xl font-['Inter'] font-extrabold text-[#000] bg-transparent cursor-pointer hover:text-gray-500" onClick={handleSetting}> 설정 </div>
+            </>
+          ) : (
+            <div className="text-xl font-['Inter'] font-extrabold text-[#000] bg-transparent cursor-pointer hover:text-gray-500" onClick={handleLogin}> 로그인 </div>
+          )}
         </div>
       </div>
 
