@@ -17,7 +17,6 @@ const Login = () => {
         console.log({ email, password });
 
         try {
-            // 로그인 API 호출 (예시 URL 사용)
             const response = await fetch('/api/members/auth/signin', {
                 method: 'POST',
                 headers: {
@@ -30,6 +29,10 @@ const Login = () => {
 
             const data = await handleApiError(response); // 에러 핸들링 호출 및 응답 json
             console.log('서버 응답:', data);
+
+            sessionStorage.setItem("token", data.token);
+            sessionStorage.setItem("user", JSON.stringify(data.user));
+            sessionStorage.setItem("userId", data.user.id.toString());
 
             if (data.user.set_profile){
                 navigate('/');

@@ -39,7 +39,7 @@ const SignUp = () => {
       const data = await handleApiError(response); // 에러 핸들링 호출 및 응답 json 반환
       console.log('서버 응답:', data);
 
-      navigate('/');
+      navigate('/login');
 
     } catch (error) {
       console.error('에러 발생:', error);
