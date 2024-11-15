@@ -105,7 +105,7 @@ const Login = () => {
                         </div>
 
                         {/* Buttons */}
-                        <div className="button-group">
+                        <div className="button-groups">
                             <button
                                 type="button"
                                 className="button signup-button"

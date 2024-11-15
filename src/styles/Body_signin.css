@@ -115,7 +115,7 @@
   }
   
   /* Buttons */
-  .button-group {
+  .button-groups {
     display: flex;
     justify-content: center;
     gap: 1rem;
