@@ -11,8 +11,8 @@ const SetProfile = () => {
     phone: '',
     address: '',
     profile_img: '',
-    favoriteSport: '',
-    favoriteTeam: ''
+    prefer_sports: '',
+    prefer_team: ''
   });
 
   // 입력 필드의 값을 업데이트하는 핸들러
@@ -37,6 +37,7 @@ const SetProfile = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
+        credentials: 'include' // 쿠키 포함
       });
 
       const data = await handleApiError(response); // 에러 핸들링 호출 및 응답 json 반환
@@ -108,14 +109,14 @@ const SetProfile = () => {
             <div className="relative">
               <select 
                 className="select-field" 
-                name="favoriteSport" 
-                value={formData.favoriteSport} 
+                name="prefer_sports" 
+                value={formData.prefer_sports} 
                 onChange={handleChange}
               >
                 <option value="">선호 스포츠</option>
-                <option value="football">축구</option>
-                <option value="baseball">야구</option>
-                <option value="basketball">농구</option>
+                <option value="1">축구</option>
+                <option value="2">야구</option>
+                <option value="3">농구</option>
               </select>
               <ChevronDown className="dropdown-icon" />
             </div>
@@ -123,14 +124,14 @@ const SetProfile = () => {
             <div className="relative">
               <select 
                 className="select-field" 
-                name="favoriteTeam" 
-                value={formData.favoriteTeam} 
+                name="prefer_team" 
+                value={formData.prefer_team} 
                 onChange={handleChange}
               >
                 <option value="">선호 구단</option>
-                <option value="team1">팀 1</option>
-                <option value="team2">팀 2</option>
-                <option value="team3">팀 3</option>
+                <option value="1">팀 1</option>
+                <option value="2">팀 2</option>
+                <option value="3">팀 3</option>
               </select>
               <ChevronDown className="dropdown-icon" />
             </div>

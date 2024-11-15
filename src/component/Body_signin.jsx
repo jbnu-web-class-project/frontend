@@ -30,10 +30,6 @@ const Login = () => {
             const data = await handleApiError(response); // 에러 핸들링 호출 및 응답 json
             console.log('서버 응답:', data);
 
-            sessionStorage.setItem("token", data.token);
-            sessionStorage.setItem("user", JSON.stringify(data.user));
-            sessionStorage.setItem("userId", data.user.id.toString());
-
             if (data.user.set_profile){
                 navigate('/');
             }
@@ -45,6 +41,12 @@ const Login = () => {
             console.error('에러 발생:', error);
             alert(`가입 실패: ${error.message}`);
         }
+    };
+
+    // Google OAuth 로그인 핸들러
+    const handleGoogleSignIn = () => {
+        // 구글 인증 엔드포인트 URL로 리디렉션합니다.
+        window.location.href = '/api/members/auth/signin/google';
     };
 
     return (
@@ -124,6 +126,7 @@ const Login = () => {
                             <button
                                 type="button"
                                 className="google-button"
+                                onClick={handleGoogleSignIn}
                             >
                                 <img
                                     src='/assets/image/google-signIn.svg'
