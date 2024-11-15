@@ -4,13 +4,15 @@ import { useNavigate } from 'react-router-dom';
 import { handleApiError } from '../utils/errorHandler';
 import '../styles/Body_signup.css';
 
-const SignUp = () => {
+const SetProfile = () => {
   const navigate = useNavigate(); // useNavigate 훅 사용
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-    confirmPassword: '',
-    name: '',
+    nickname: '',
+    phone: '',
+    address: '',
+    profile_img: '',
+    favoriteSport: '',
+    favoriteTeam: ''
   });
 
   // 입력 필드의 값을 업데이트하는 핸들러
@@ -24,11 +26,12 @@ const SignUp = () => {
 
   // 폼 제출 핸들러
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     console.log(formData); // 현재 formData 출력 (서버로 보내기 전에 확인 용도)
-    
+
     try {
-      const response = await fetch('/api/members/auth/signup', {
+      // 서버에 데이터 전송 (예시 URL 사용)
+      const response = await fetch('/api/members/auth/setProfile', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -39,7 +42,7 @@ const SignUp = () => {
       const data = await handleApiError(response); // 에러 핸들링 호출 및 응답 json 반환
       console.log('서버 응답:', data);
 
-      navigate('/login');
+      navigate('/');
 
     } catch (error) {
       console.error('에러 발생:', error);
@@ -49,7 +52,7 @@ const SignUp = () => {
 
   // 취소 버튼 핸들러
   const handleCancel = () => {
-    navigate('/login');
+    navigate('/');
   };
 
   return (
@@ -66,48 +69,71 @@ const SignUp = () => {
             </div>
           </div>
 
-          {/* Google Sign Up Button */}
-          <div className="google-btn-container">
-            <button className="google-btn">
-              <img src="../assets/image/google-signUp.svg" alt="Google Sign Up" />
-            </button>
-          </div>
-
           {/* Signup Form */}
           <form className="form" onSubmit={handleSubmit}>
             {/* Input Fields */}
             <input 
-              type="email" 
-              name="email" 
-              placeholder="아이디 (이메일)" 
+              type="file" 
+              accept="image/*" 
+              placeholder="프로필이미지" 
               className="input-field" 
-              value={formData.email} 
+              onChange={(e) => setFormData({ ...formData, profile_img: e.target.files[0] })} 
+            />
+            <input 
+              type="text" 
+              name="nickname" 
+              placeholder="닉네임" 
+              className="input-field" 
+              value={formData.nickname} 
               onChange={handleChange} 
             />
             <input 
-              type="password" 
-              name="password" 
-              placeholder="비밀번호" 
+              type="tel" 
+              name="phone" 
+              placeholder="전화번호" 
               className="input-field" 
-              value={formData.password} 
-              onChange={handleChange} 
-            />
-            <input 
-              type="password" 
-              name="confirmPassword" 
-              placeholder="비밀번호 확인" 
-              className="input-field" 
-              value={formData.confirmPassword} 
+              value={formData.phone} 
               onChange={handleChange} 
             />
             <input 
               type="text" 
-              name="name" 
-              placeholder="이름" 
+              name="address" 
+              placeholder="주소" 
               className="input-field" 
-              value={formData.name} 
+              value={formData.address} 
               onChange={handleChange} 
             />
+
+            {/* Dropdown Selects */}
+            <div className="relative">
+              <select 
+                className="select-field" 
+                name="favoriteSport" 
+                value={formData.favoriteSport} 
+                onChange={handleChange}
+              >
+                <option value="">선호 스포츠</option>
+                <option value="football">축구</option>
+                <option value="baseball">야구</option>
+                <option value="basketball">농구</option>
+              </select>
+              <ChevronDown className="dropdown-icon" />
+            </div>
+
+            <div className="relative">
+              <select 
+                className="select-field" 
+                name="favoriteTeam" 
+                value={formData.favoriteTeam} 
+                onChange={handleChange}
+              >
+                <option value="">선호 구단</option>
+                <option value="team1">팀 1</option>
+                <option value="team2">팀 2</option>
+                <option value="team3">팀 3</option>
+              </select>
+              <ChevronDown className="dropdown-icon" />
+            </div>
 
             {/* Buttons */}
             <div className="button-group">
@@ -121,4 +147,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SetProfile;
