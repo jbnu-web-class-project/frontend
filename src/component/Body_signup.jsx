@@ -111,8 +111,8 @@ const SignUp = () => {
 
             {/* Buttons */}
             <div className="button-groups">
-              <button type="button" className="cancel-button" onClick={handleCancel}>취소</button>
-              <button type="submit" className="submit-button">등록</button>
+              <button type="button" className="cancel-button2" onClick={handleCancel}>취소</button>
+              <button type="submit" className="submit-button2">등록</button>
             </div>
           </form>
         </div>

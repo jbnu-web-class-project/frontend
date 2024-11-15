@@ -107,15 +107,15 @@
   }
   
   /* Buttons */
-  .button-group {
+  .button-groups {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-top: 3rem;
   }
   
-  .cancel-button,
-  .submit-button {
+  .cancel-button2,
+  .submit-button2 {
     padding: 1rem 3rem;
     font-size: 1.125rem;
     font-weight: 500;
@@ -124,19 +124,19 @@
     transition: background-color 0.3s;
   }
   
-  .cancel-button {
+  .cancel-button2 {
     background-color: #9ca3af;
   }
   
-  .cancel-button:hover {
+  .cancel-button2:hover {
     background-color: #6b7280;
   }
   
-  .submit-button {
+  .submit-button2 {
     background-color: #1f2937;
   }
   
-  .submit-button:hover {
+  .submit-button2:hover {
     background-color: #111827;
   }
   
