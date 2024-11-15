@@ -53,7 +53,7 @@ const Header = () => {
         <div className="flex flex-raw">
           <div className="text-xl font-['Inter'] font-extrabold text-[#000] bg-transparent cursor-pointer hover:text-gray-500" onClick={handleLogout}> 로그아웃 </div>
           <div className="text-xl font-['Inter'] font-extrabold text-[#000] whitespace-pre">    |    </div>
-          <div className="text-xl font-['Inter'] font-extrabold text-[#000] bg-transparent cursor-pointer hover:text-gray-500" onClick={handleSetting}> 설정 </div>
+          <div className="text-xl font-['Inter'] font-extrabold text-[#000] bg-transparent cursor-pointer hover:text-gray-500" onClick={handleSetting}> 마이페이지 </div>
         </div>
       </div>
 

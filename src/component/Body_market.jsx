@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronUp, ChevronDown, Search } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const BodyMarket = () => {
+
+  const navigate = useNavigate();
 
   const [products] = useState([
     {
@@ -150,6 +153,10 @@ const BodyMarket = () => {
   useEffect(() => {
       applyFilters();
   }, [filters]);
+
+  const handleProductClick = (productId) => {
+    navigate(`/product/${productId}`);
+  };
 
   return (
     <main className="container mx-auto px-4 py-8">
@@ -391,28 +398,32 @@ const BodyMarket = () => {
       {/* 상품 그리드 */}
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
         {filteredProducts.map((product) => (
-            <div key={product.id} className="flex flex-col">
-                <div className="bg-black rounded-lg mb-4 aspect-square relative overflow-hidden group">
-                    <img 
-                        src={product.image}
-                        alt={product.title}
-                        className="absolute inset-0 w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
-                        onError={(e) => {
-                            e.currentTarget.src = '/images/backup.png';
-                        }}
-                    />
-                </div>
-                <h3 className="text-xl font-bold mb-2">{product.title}</h3>
-                <p className="text-lg mb-2">{product.price.toLocaleString()} 원</p>
-                <p className="text-gray-600">{product.sizes}</p>
+          <div
+            key={product.id}
+            className="flex flex-col cursor-pointer hover:shadow-lg transition-shadow"
+            onClick={() => handleProductClick(product.id)}
+          >
+            <div className="bg-black rounded-lg mb-4 aspect-square relative overflow-hidden group">
+              <img
+                src={product.image}
+                alt={product.title}
+                className="absolute inset-0 w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
+                onError={(e) => {
+                  e.currentTarget.src = '/images/backup.png';
+                }}
+              />
             </div>
+            <h3 className="text-xl font-bold mb-2">{product.title}</h3>
+            <p className="text-lg mb-2">{product.price.toLocaleString()} 원</p>
+            <p className="text-gray-600">{product.sizes.join(', ')}</p>
+          </div>
         ))}
         {filteredProducts.length === 0 && (
-            <div className="col-span-full text-center py-8 text-gray-500">
-                검색 결과가 없습니다.
-            </div>
+          <div className="col-span-full text-center py-8 text-gray-500">
+            검색 결과가 없습니다.
+          </div>
         )}
-    </section>
+      </section>
     </main>
   );
 };

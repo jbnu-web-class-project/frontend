@@ -1,0 +1,157 @@
+.order-history-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .order-history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .order-history-header h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .period-buttons {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .period-buttons button {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+  }
+  
+  .period-buttons button.active {
+    background: #4263eb;
+    color: white;
+    border-color: #4263eb;
+  }
+  
+  .order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .order-item {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .order-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .order-info {
+    display: flex;
+    gap: 16px;
+    color: #666;
+  }
+  
+  .order-status {
+    font-weight: bold;
+    color: #4263eb;
+  }
+  
+  .product-info {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+  }
+  
+  .product-image {
+    width: 100px;
+    height: 100px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .product-details {
+    flex: 1;
+  }
+  
+  .product-details h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .option {
+    color: #666;
+    margin-bottom: 8px;
+  }
+  
+  .price {
+    font-weight: bold;
+  }
+  
+  .order-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .order-actions button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .detail-button {
+    background: white;
+    border: 1px solid #ddd;
+  }
+  
+  .review-button {
+    background: #4263eb;
+    color: white;
+    border: none;
+  }
+  
+  .return-button {
+    background: white;
+    border: 1px solid #4263eb;
+    color: #4263eb;
+  }
+  
+  /* 반응형 디자인 */
+  @media (max-width: 768px) {
+    .order-history-header {
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+    }
+  
+    .product-info {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .order-actions {
+      width: 100%;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }

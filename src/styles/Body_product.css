@@ -1,0 +1,179 @@
+.product-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.product-section {
+  display: flex;
+  gap: 32px;
+}
+
+.image-section {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: #f3f4f6;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.marking-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1e40af;
+  color: white;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.info-section {
+  flex: 1;
+}
+
+.product-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 28px;
+  color: #2563eb;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.shipping-info {
+  color: #4b5563;
+  margin-bottom: 24px;
+}
+
+.select-group {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.select-wrapper {
+  flex: 1;
+}
+
+.select-box {
+  width: 100%;
+  padding: 12px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.purchase-button {
+  flex: 2;
+  padding: 16px;
+  background-color: #4F46E5;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.purchase-button:hover {
+  border-color: #000;
+}
+
+.cart-button {
+  flex: 1;
+  padding: 16px;
+  background-color: #FB923C;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.cart-button:hover {
+  border-color: #000;
+}
+
+.icon-button {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.icon-button:hover {
+  border-color: #000;
+}
+
+.heart-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.heart-icon.filled {
+  fill: #FF0000;
+  stroke: #FF0000;
+}
+
+.heart-icon.empty {
+  fill: none;
+  stroke: #000;
+}
+
+.warning-text {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 16px;
+}
+
+.tab-section {
+  margin-top: 48px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.tab-buttons {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tab-button {
+  padding: 12px 24px;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.tab-button.active {
+  border-bottom: 2px solid #2563eb;
+  color: #2563eb;
+}
+
+.tab-content {
+  padding: 24px 0;
+}
+
+.description-placeholder {
+  width: 100%;
+  height: 300px;
+  background-color: #f3f4f6;
+}

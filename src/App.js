@@ -7,6 +7,9 @@ import Signup from './page/Signup';
 import TMP from './page/tmp';
 import Market from './page/Market';
 import Community from './page/Community';
+import ProductDetail from './page/ProductDetail';
+import Payments from './page/Payments';
+import OrderHistory from './page/OrderHistory';
 
 const App = () => {
   return (
@@ -18,6 +21,9 @@ const App = () => {
         <Route path="/market" element={<Market />} />
         <Route path="/community" element={<Community />} />
         <Route path="/tmp" element={<TMP />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/payments" element={<Payments />} />
+        <Route path="/orderhistory" element={<OrderHistory />} />
 
         {/* 404 페이지 */}
         <Route path="*" element={<NotFound />} />
